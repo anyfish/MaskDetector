@@ -17,12 +17,25 @@
 	<title></title>
 </head>
 <body>
-<h1>
-	<form target="_parent" action="/home" method="post" > 
-        <input type="text" class="form-control" name="name" value="{{name}}">
-        <input type="text" class="form-control" name="ap" value="{{ap}}">
-        <button class="btn btn-primary">Aceptar</button>
-	</form>
-</h1>
+	<div class="container-fluid">
+		<div class="row my-5">
+			<div class="col-sm-4"> </div>
+			<div class="col-sm-4 my-5">
+				<form target="_parent" action="/home" method="post">
+					<div class="form-group">
+						<label for="email">Nombre:</label>
+						<input type="text" class="form-control" name="name" value="{{name}}">
+					</div>
+					<div class="form-group">
+						<label for="email">Apellido:</label>
+						<input type="text" class="form-control" name="ap" value="{{ap}}">
+					</div>
+					<button class="btn btn-primary">Aceptar</button>
+				</form>
+				<button target="_parent" action="/reg" method="post" class="btn btn-primary">Registrase</button>
+			</div>
+			<div class="col-sm-4"> </div>
+		</div>
+	</div>
 </body>
 </html>

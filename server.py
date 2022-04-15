@@ -20,7 +20,22 @@ def index():
 
 @app.route('/home', methods=['POST'])
 def Home():
-    return render_template('home.html')
+    nombre=request.form['name']
+    ap=request.form['ap']
+    return render_template('home.html', nombre=nombre, app=ap)
+
+@app.route('/reg', methods=['GET'])
+def reg():
+    return render_template('registro.html')
+
+@app.route('/val', methods=['POST'])
+def val():
+    nombre = ""
+    ap = ""
+    correo= ""
+    psw = ""
+    edad= ""
+    return render_template("regisexi.html")
 
 if __name__ == '__main__':
     app.run(port=PORT,debug=DEBUG)
