@@ -1,0 +1,1 @@
+mysql://b9a31ee20178d5:82c83d73@us-cdbr-east-05.cleardb.net/heroku_59960be04ed6f4c?reconnect=true

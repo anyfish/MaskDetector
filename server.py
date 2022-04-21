@@ -1,5 +1,6 @@
 from flask import Flask # importamos la libreria flask
 from flask import render_template, request, url_for #importamos render_templetam, request, url _for
+from fun import fun
 app = Flask(__name__)
 PORT = 8000
 DEBUG = True
@@ -9,6 +10,7 @@ def not_found(error):
 
 @app.route('/',methods=['GET'])
 def index():
+    fun.condb()
     #texto="""<h1></h1>"""
     #return texto
     #return render_template('index2.html')
