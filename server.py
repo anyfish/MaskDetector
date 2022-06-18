@@ -18,9 +18,13 @@ def index():
 
 @app.route('/home',methods=['POST'])
 def Home():
-    nombre=request.form['name']
-    ap=request.form['ap']
-    return render_template('home.html',nombre=nombre,ap=ap)
+    ema=request.form['ema']
+    contr=request.form['contr']
+    if(fun.selectuser(ema,contr)):
+        return render_template('home.html')
+    else:
+        return render_template('index3.html')
+
 
 @app.route('/reg',methods=['GET'])
 def reg():    
